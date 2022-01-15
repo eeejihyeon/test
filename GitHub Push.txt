@@ -1,0 +1,72 @@
+// GitHub 업로드
+
+
+Last login: Fri Jan 14 18:24:15 on ttys000
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+ijihyeon-ui-MacBook-Pro:~ leejihyeon$ cd desktop
+ijihyeon-ui-MacBook-Pro:desktop leejihyeon$ cd test
+ijihyeon-ui-MacBook-Pro:test leejihyeon$ git init
+힌트: Using 'master' as the name for the initial branch. This default branch name
+힌트: is subject to change. To configure the initial branch name to use in all
+힌트: of your new repositories, which will suppress this warning, call:
+힌트: 
+힌트: 	git config --global init.defaultBranch <name>
+힌트: 
+힌트: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+힌트: 'development'. The just-created branch can be renamed via this command:
+힌트: 
+힌트: 	git branch -m <name>
+/Users/leejihyeon/Desktop/test/.git/ 안의 빈 깃 저장소를 다시 초기화했습니다
+ijihyeon-ui-MacBook-Pro:test leejihyeon$ git add .
+ijihyeon-ui-MacBook-Pro:test leejihyeon$ git status
+현재 브랜치 master
+
+아직 커밋이 없습니다
+
+커밋할 변경 사항:
+  (스테이지 해제하려면 "git rm --cached <파일>..."을 사용하십시오)
+	새 파일:       test1.html
+	새 파일:       test2.html
+
+ijihyeon-ui-MacBook-Pro:test leejihyeon$ git commit -m "first commit"
+[master (최상위-커밋) cb47e63] first commit
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test1.html
+ create mode 100644 test2.html
+ijihyeon-ui-MacBook-Pro:test leejihyeon$ git remote add origin git@github.com:eeejihyeon/test.git
+ijihyeon-ui-MacBook-Pro:test leejihyeon$ git remote -v
+origin	git@github.com:eeejihyeon/test.git (fetch)
+origin	git@github.com:eeejihyeon/test.git (push)
+ijihyeon-ui-MacBook-Pro:test leejihyeon$ git push origin master
+오브젝트 나열하는 중: 3, 완료.
+오브젝트 개수 세는 중: 100% (3/3), 완료.
+Delta compression using up to 4 threads
+오브젝트 압축하는 중: 100% (2/2), 완료.
+오브젝트 쓰는 중: 100% (3/3), 216 bytes | 216.00 KiB/s, 완료.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:eeejihyeon/test.git
+ * [new branch]      master -> master
+ijihyeon-ui-MacBook-Pro:test leejihyeon$ git add .
+ijihyeon-ui-MacBook-Pro:test leejihyeon$ git status
+현재 브랜치 master
+커밋할 변경 사항:
+  (use "git restore --staged <file>..." to unstage)
+	수정함:        test1.html
+
+ijihyeon-ui-MacBook-Pro:test leejihyeon$ git commit -m "second commit"
+[master 8ce6c0f] second commit
+ 1 file changed, 11 insertions(+)
+ijihyeon-ui-MacBook-Pro:test leejihyeon$ git push origin master
+Warning: Permanently added the ECDSA host key for IP address '52.78.231.108' to the list of known hosts.
+오브젝트 나열하는 중: 5, 완료.
+오브젝트 개수 세는 중: 100% (5/5), 완료.
+Delta compression using up to 4 threads
+오브젝트 압축하는 중: 100% (3/3), 완료.
+오브젝트 쓰는 중: 100% (3/3), 410 bytes | 410.00 KiB/s, 완료.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:eeejihyeon/test.git
+   cb47e63..8ce6c0f  master -> master
+ijihyeon-ui-MacBook-Pro:test leejihyeon$ 
